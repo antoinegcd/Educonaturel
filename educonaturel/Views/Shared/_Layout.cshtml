@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="fr-fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="gw2prrxoKZHSqzaBJVW8kolas0OJSMqXq1oq87ocrnY" />
+    <title>@ViewData["Title"] - Educonaturel</title>
+    <link rel="stylesheet" href="~/lib/materialize/css/materialize.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper green lighten-2" style="padding-left: 2em;">
+                    <a class="brand-logo" asp-area="" asp-controller="Home" asp-action="Index">EducOnaturel</a>
+                    <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="QuiSommesNous" asp-action="Index">Qui sommes-nous ?</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="MediationJardin" asp-action="Index">Médiation par le jardin</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="MediationAnimale" asp-action="Index">Médiation animale</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="SalleEveil" asp-action="Index">Salle d'éveil</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="TarifsContacts" asp-action="Index">Tarifs et contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul class="sidenav" id="mobile-links">
+            <li>
+                <a asp-area="" asp-controller="QuiSommesNous" asp-action="Index">Qui sommes-nous ?</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="MediationJardin" asp-action="Index">Médiation par le jardin</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="MediationAnimale" asp-action="Index">Médiation animale</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="SalleEveil" asp-action="Index">Salle d'éveil</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="TarifsContacts" asp-action="Index">Tarifs et contacts</a>
+            </li>
+        </ul>
+    </header>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+    <footer class="green lighten-2">
+        <div class="container">
+            &copy; 2020 - educonaturel - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/materialize/js/materialize.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
